@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  test:
+    build: .
+    image: yurifl/profun-procedural
+    volumes:
+      - .:/usr/local/src
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=$DISPLAY
